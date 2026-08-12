@@ -1,85 +1,94 @@
 ---
 name: hibike-euphonium-human-writing
-description: [TODO: Complete and informative explanation of what the skill does and when to use it. Include WHEN to use this skill - specific scenarios, file types, or tasks that trigger it.]
+description: 使用从《響け！ユーフォニアム／吹响吧！上低音号》提炼的高层叙事机制，辅助原创青春小说写作、章节诊断、去AI味修订和小说转动画。仅在用户明确提到该作品、明确调用本 Skill，或明确要求使用这套蒸馏框架时使用；不得模仿作者文风、续写原作人物或复刻原作表达。
 ---
 
-# Hibike Euphonium Human Writing
+# 《吹响吧！上低音号》青春小说去AI味写作
 
-## Overview
+## 核心原则
 
-[TODO: 1-2 sentences explaining what this skill enables]
+迁移高层故事机制，不迁移作者句法、角色声音、人物关系、专有制度、台词、乐曲、名场面或情节顺序。
 
-## Structuring This Skill
+把“去AI味”理解为修正机械化表达、过度解释、虚假生活感和模板化叙事。不得把本 Skill 用于规避AI检测、伪造作者身份或掩盖文本来源。
 
-[TODO: Choose the structure that best fits this skill's purpose. Common patterns:
+开始任何任务前，先完整阅读 `references/originality-boundaries.md`。再按任务路由读取最少的参考文件。
 
-**1. Workflow-Based** (best for sequential processes)
-- Works well when there are clear step-by-step procedures
-- Example: DOCX skill with "Workflow Decision Tree" -> "Reading" -> "Creating" -> "Editing"
-- Structure: ## Overview -> ## Workflow Decision Tree -> ## Step 1 -> ## Step 2...
+## 任务路由
 
-**2. Task-Based** (best for tool collections)
-- Works well when the skill offers different operations/capabilities
-- Example: PDF skill with "Quick Start" -> "Merge PDFs" -> "Split PDFs" -> "Extract Text"
-- Structure: ## Overview -> ## Quick Start -> ## Task Category 1 -> ## Task Category 2...
+### 分析作品机制
 
-**3. Reference/Guidelines** (best for standards or specifications)
-- Works well for brand guidelines, coding standards, or requirements
-- Example: Brand styling with "Brand Guidelines" -> "Colors" -> "Typography" -> "Features"
-- Structure: ## Overview -> ## Guidelines -> ## Specifications -> ## Usage...
+读取 `references/storycraft-framework.md` 和 `references/source-notes.md`。
 
-**4. Capabilities-Based** (best for integrated systems)
-- Works well when the skill provides multiple interrelated features
-- Example: Product Management with "Core Capabilities" -> numbered capability list
-- Structure: ## Overview -> ## Core Capabilities -> ### 1. Feature -> ### 2. Feature...
+区分官方事实、创作者公开陈述与分析性推断。解释机制的作用、适用条件和限制，不把推断写成作者原话，不提供原文复现。
 
-Patterns can be mixed and matched as needed. Most skills combine patterns (e.g., start with task-based, add workflow for complex operations).
+### 写作原创内容
 
-Delete this entire "Structuring This Skill" section when done - it's just guidance.]
+读取 `references/storycraft-framework.md`。
 
-## [TODO: Replace with the first main section based on chosen structure]
+先锁定原创人物的眼前目标、偏见、制度限制、现实资源和失败代价，再写场景或章节。所有人物、组织、专业任务、地点、关系结构、因果链与结果都必须从当前原创项目推出。
 
-[TODO: Add content here. See examples in existing skills:
-- Code samples for technical skills
-- Decision trees for complex workflows
-- Concrete examples with realistic user requests
-- References to scripts/templates/references as needed]
+交付正文时只输出正文。不得把“制度节点”“视角机制”“声音证据”等制作术语写进小说。
 
-## Resources (optional)
+### 去AI味修订
 
-Create only the resource directories this skill actually needs. Delete this section if no resources are required.
+读取 `references/humanization-guide.md`。
 
-### scripts/
-Executable code (Python/Bash/etc.) that can be run directly to perform specific operations.
+先锁定原意、人物事实、情节结果和有辨识度的个人表达，再判断每个可疑句段的功能。无功能内容优先删除；有功能但说透的内容改为人物当场能看见、听见、误解或承担的后果。
 
-**Examples from other skills:**
-- PDF skill: `fill_fillable_fields.py`, `extract_form_field_info.py` - utilities for PDF manipulation
-- DOCX skill: `document.py`, `utilities.py` - Python modules for document processing
+交付修订稿时先给净稿。只有用户要求时，才附简短修改说明。
 
-**Appropriate for:** Python scripts, shell scripts, or any executable code that performs automation, data processing, or specific operations.
+### 诊断章节
 
-**Note:** Scripts may be executed without loading into context, but can still be read by Codex for patching or environment adjustments.
+读取 `references/storycraft-framework.md` 和 `references/humanization-guide.md`。
 
-### references/
-Documentation and reference material intended to be loaded into context to inform Codex's process and thinking.
+按严重程度检查：
 
-**Examples from other skills:**
-- Product management: `communication.md`, `context_building.md` - detailed workflow guides
-- BigQuery: API reference documentation and query examples
-- Finance: Schema documentation, company policies
+1. 视角人物是否知道了不该知道的信息；
+2. 冲突是否真正改变选择、资源、责任或关系；
+3. 对话是否在摩擦，还是轮流完整说明立场；
+4. 专业细节是否产生后果；
+5. 配角是否拥有自己的目标和前文记忆；
+6. 章节是否用作者总结代替余波；
+7. 是否存在机械小动作、重复解释和伪洞见。
 
-**Appropriate for:** In-depth documentation, API references, database schemas, comprehensive guides, or any detailed information that Codex should reference while working.
+先报告具体句段或场景，再给最小整改方案。用户只要求诊断时，不擅自重写全文。
 
-### assets/
-Files not intended to be loaded into context, but rather used within the output Codex produces.
+### 转换为动画表达
 
-**Examples from other skills:**
-- Brand styling: PowerPoint template files (.pptx), logo files
-- Frontend builder: HTML/React boilerplate project directories
-- Typography: Font files (.ttf, .woff2)
+读取 `references/novel-animation-translation.md`。
 
-**Appropriate for:** Templates, boilerplate code, document templates, images, icons, fonts, or any files meant to be copied or used in the final output.
+只为关键心理变化选择必要的空间、身体、声音或对白证据。允许某类证据为空。不得为了“可视化”给人物添加摸杯子、捏衣角、转头、深呼吸等无后果动作。
 
----
+### 检查原创性
 
-**Not every skill requires all three types of resources.**
+重新读取 `references/originality-boundaries.md`。
+
+删除作品专名后，若人物关系、制度、场面组合、因果顺序或结局仍能对应原作具体内容，要求改变至少一项核心结构后再写。
+
+## 标准工作流
+
+1. 确认任务类型和必须保留的事实。
+2. 读取原创性边界及当前任务所需参考文件。
+3. 选择不超过四项真正相关的机制。
+4. 完成分析、写作或修订。
+5. 检查是否出现仿写、换皮、主题结算或无意义动作。
+6. 按用户要求交付净稿、诊断或转换卡。
+
+## 必须改道的请求
+
+遇到下列请求时，不生成近似文本，改为提供高层机制和全新原创方案：
+
+- 模仿武田绫乃或译者的独特文风；
+- 续写、改写或补写原作人物；
+- 复刻、拼接或换名重演原作台词与名场面；
+- 让原创人物与原作人物形成一一映射；
+- 承诺绕过AI检测器或伪装成人类作者。
+
+## 交稿自检
+
+- 输出是否仍由当前原创人物和处境决定？
+- 删除最后一句解释后，前文是否已经表达清楚？若是，删除解释。
+- 保留的动作是否改变局面、选择、后果、理解或关系？
+- 文本是否保留人物的误解、不体面、答非所问和未完成反应？
+- 修订是否只是同义替换、统一短句或另一种模板化写法？若是，重新处理。
+
