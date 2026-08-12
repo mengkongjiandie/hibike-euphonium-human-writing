@@ -73,9 +73,21 @@ Windows 默认区域编码会使 Python 的 `Path.read_text()` 按 GBK 读取 UT
 - 来源说明区分官方事实、公开陈述和分析推断；
 - MIT License 只覆盖仓库自行撰写的 Skill 文字与方法说明。
 
+## GitHub远程验证
+
+- 公开仓库：`https://github.com/mengkongjiandie/hibike-euphonium-human-writing`
+- 首次远程验证提交：`33a4e5f9474f35858ac40ea7e937420af99fc8a9`
+- 从 GitHub HTTPS 地址克隆到全新的系统临时目录；
+- 干净克隆的 `git status --short` 无输出；
+- 在克隆副本上重新运行官方 `quick_validate.py`，结果为 `Skill is valid!`；
+- 在克隆副本上重新扫描私有项目名、人物名、本地绝对路径、私有运行时与私有统计标识，结果无匹配；
+- 克隆副本只包含许可证、Skill入口、中文界面元数据和六份参考文件。
+
+安装时可将仓库根目录克隆或复制到支持 Agent Skills 的本地 skills 目录；仓库根目录本身即为 Skill 目录。
+
 ## 已知边界
 
 - 本 Skill 是中文优先版本，未验证其他语言的自然化修订效果；
 - 去AI味依赖语境判断，不提供检测分数，也不保证通过任何AI检测器；
 - 静态路由测试验证的是指令覆盖与边界，不等同于所有模型上的一致生成结果；
-- GitHub远程安装与干净克隆验证须在首次推送后补记。
+- 不同 Agent Skills 运行时的安装目录和启用方式可能不同，使用者应遵循对应运行时文档。
