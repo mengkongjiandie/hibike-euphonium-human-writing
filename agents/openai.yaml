@@ -1,4 +1,4 @@
 interface:
-  display_name: "《吹响吧！上低音号》青春小说去AI味写作"
-  short_description: "用高层叙事机制写作、诊断和自然化修订原创青春音乐小说"
-  default_prompt: "请使用《吹响吧！上低音号》蒸馏出的高层叙事机制，在不模仿原作的前提下写作、诊断或去除这篇原创青春小说的AI味。"
+  display_name: "《吹响吧！上低音号》虚构小说去AI味写作"
+  short_description: "面向中文虚构小说的自然写作、续写、诊断与保真修订"
+  default_prompt: "请使用这个 Skill 写作、续写、诊断或自然化修订中文虚构小说，并保留既定事实与人物声音。"
